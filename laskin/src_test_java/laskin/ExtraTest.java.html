@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>ExtraTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">laskin (Sep 17, 2023 4:25:21 PM)</a> &gt; <a href="../../index.html" class="el_group">laskin</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">laskin</a> &gt; <span class="el_source">ExtraTest.java</span></div><h1>ExtraTest.java</h1><pre class="source lang-java linenums">package laskin;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+<span class="fc" id="L13">public class ExtraTest extends AbstractParent {</span>
+
+<span class="fc" id="L15">    private static Laskin laskin = new Laskin();</span>
+<span class="fc" id="L16">    private final double DELTA = 0.001;</span>
+
+    @BeforeAll
+    public static void testVirtaON() {
+<span class="fc" id="L20">        System.out.println(&quot;@BeforeAll Virta ON (ennen ensimmäistä testiä)&quot;);</span>
+<span class="fc" id="L21">        laskin.virtaON();</span>
+<span class="fc" id="L22">    }</span>
+
+    @AfterAll
+    public static void testVirtaOFF() {
+<span class="fc" id="L26">        System.out.println(&quot;@AfterAll Virta OFF (kaikki testit ajettu).&quot;);</span>
+<span class="fc" id="L27">        laskin.virtaOFF();</span>
+<span class="fc" id="L28">        laskin = null;</span>
+<span class="fc" id="L29">    }</span>
+
+    @BeforeEach
+    public void testNollaa() {
+<span class="fc" id="L33">        System.out.println(&quot;  Nollaa laskin.&quot;);</span>
+<span class="fc" id="L34">        laskin.nollaa();</span>
+<span class="fc" id="L35">        assertEquals(0, laskin.annaTulos(), &quot;Nollaus ei onnistunut&quot;);</span>
+<span class="fc" id="L36">    }</span>
+
+    @Test
+    public void testNelio2() {
+<span class="fc" id="L40">        laskin.nelio(2);</span>
+<span class="fc" id="L41">        assertEquals(4, laskin.annaTulos(), &quot;Luvun 2 Neliöön korotus väärin&quot;);</span>
+<span class="fc" id="L42">    }</span>
+
+    @Test
+    public void testNelio4() {
+<span class="fc" id="L46">        laskin.nelio(4);</span>
+<span class="nc" id="L47">        assertEquals(16, laskin.annaTulos(),&quot;Luvun 4 neliöön korotus väärin&quot;);</span>
+<span class="nc" id="L48">    }</span>
+
+    @Test
+    public void testNelio5() {
+<span class="fc" id="L52">        laskin.nelio(5);</span>
+<span class="nc" id="L53">        assertEquals(25, laskin.annaTulos(), DELTA,&quot;Luvun 5 neliöön korotus väärin&quot;);</span>
+<span class="nc" id="L54">    }</span>
+    @Test
+    public void testNeliojuuri2() {
+<span class="fc" id="L57">        laskin.neliojuuri(2);</span>
+		// Tähän assertXXX(), odotetun tuloksen tulee olla (int)Math.sqrt(2)
+<span class="fc" id="L59">    }</span>
+    
+    @Test
+    @DisplayName(&quot;Testaa negatiivinen neliöjuuri&quot;)
+    public void testNeliojuuriNegat() {
+<span class="nc" id="L64">         fail(&quot;TESTIÄ EI OLE VIELÄ LAADITTU.&quot;);</span>
+<span class="nc" id="L65">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span>laskin (Sep 17, 2023 4:25:21 PM)</div></body></html>

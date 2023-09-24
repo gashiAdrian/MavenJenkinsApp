@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: laskin.ExtraTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.048 s <<< FAILURE! - in laskin.ExtraTest
+laskin.ExtraTest.testNeliojuuri2  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1.0> but was: <1.4142135623730951>
+	at laskin.ExtraTest.testNeliojuuri2(ExtraTest.java:58)
+
+laskin.ExtraTest.testNelio2  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Luvun 2 Neliöön korotus väärin ==> expected: <4.0> but was: <0.0>
+	at laskin.ExtraTest.testNelio2(ExtraTest.java:41)
+
+laskin.ExtraTest.testNelio4  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Luvun 4 neliöön korotus väärin ==> expected: <16.0> but was: <0.0>
+	at laskin.ExtraTest.testNelio4(ExtraTest.java:47)
+
+laskin.ExtraTest.testNelio5  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Luvun 5 neliöön korotus väärin ==> expected: <25.0> but was: <0.0>
+	at laskin.ExtraTest.testNelio5(ExtraTest.java:53)
+

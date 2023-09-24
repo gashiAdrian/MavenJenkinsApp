@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: laskin.LaskinTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 0.006 s <<< FAILURE! - in laskin.LaskinTest
+laskin.LaskinTest.testJaaNollalla  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.ArithmeticException> but was: <java.lang.IllegalArgumentException>
+	at laskin.LaskinTest.testJaaNollalla(LaskinTest.java:55)
+Caused by: java.lang.IllegalArgumentException: Nollalla ei voi jakaa
+	at laskin.LaskinTest.lambda$testJaaNollalla$0(LaskinTest.java:55)
+	at laskin.LaskinTest.testJaaNollalla(LaskinTest.java:55)
+
